@@ -20,3 +20,24 @@ vim.api.nvim_set_keymap("n", "gr", '<cmd>lua vim.lsp.buf.references()<CR>', { no
 -- oil remap
 vim.api.nvim_set_keymap("n", "<leader>pv", "<CMD>Oil<CR>", { desc = "Open parent directory" })
 vim.api.nvim_set_keymap("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
+
+
+-- terminal keymaps
+vim.keymap.set('n', '<C-j>', "<cmd>ToggleTerm direction=vertical size=100<cr>")
+vim.keymap.set('v', '<C-j>', "<cmd>ToggleTerm direction=vertical size=100<cr>")
+vim.keymap.set('i', '<C-j>', "<cmd>ToggleTerm direction=vertical size=100<cr>")
+
+require("toggleterm").setup()
+local opts = {buffer = 0}
+
+function _G.set_terminal_keymaps()
+	vim.keymap.set('t', '<esc>', [[<C-\><C-n>]], opts)
+	vim.keymap.set('t', 'JK', [[<C-\><C-n>]], opts)
+	vim.keymap.set('t', '<C-l>', "<Up>", opts)
+	vim.keymap.set('t', '<C-k>', "<Down>", opts)
+
+	vim.keymap.set('t', '<C-j>', "<cmd>ToggleTerm<cr>", opts)
+end
+
+--
+vim.cmd('autocmd! TermOpen term://* lua set_terminal_keymaps()')
