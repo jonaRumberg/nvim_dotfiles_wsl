@@ -5,7 +5,7 @@ return {
 		event = "VeryLazy",
 		dependencies = {
 			"mason.nvim",
-			"williamboman/mason-lspconfig.nvim",
+            { "williamboman/mason-lspconfig.nvim", tag="v1.31.0"}
 		},
 		config = function()
 			require("mason").setup({})

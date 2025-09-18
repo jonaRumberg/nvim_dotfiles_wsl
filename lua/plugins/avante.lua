@@ -2,7 +2,7 @@ return {
   "yetone/avante.nvim",
   event = "VeryLazy",
   lazy = false,
-  version = false, -- Set this to "*" to always pull the latest release version, or set it to false to update to the latest code changes.
+  version = '*', -- Set this to "*" to always pull the latest release version, or set it to false to update to the latest code changes.
   opts = {
     -- add any opts here
     -- for example
@@ -25,8 +25,9 @@ return {
     -- "hrsh7th/nvim-cmp", -- autocompletion for avante commands and mentions
     -- "ibhagwan/fzf-lua", -- for file_selector provider fzf
     -- "nvim-tree/nvim-web-devicons", -- or echasnovski/mini.icons
-    { 
+    {
         "zbirenbaum/copilot.lua",
+        version = '*',
         cmd = "Copilot",
         event = "InsertEnter",
         config = function()
