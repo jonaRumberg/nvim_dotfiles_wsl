@@ -21,6 +21,12 @@ vim.api.nvim_set_keymap("n", "gr", '<cmd>lua vim.lsp.buf.references()<CR>', { no
 vim.api.nvim_set_keymap("n", "<leader>pv", "<CMD>Oil<CR>", { desc = "Open parent directory" })
 vim.api.nvim_set_keymap("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
 
+-- half jump
+vim.keymap.set('n', '<C-k>', "<C-d>")
+vim.keymap.set('n', '<C-l>', "<C-u>")
+
+-- search and replace
+vim.keymap.set('n', '<leader>s', ":%s/")
 
 -- terminal keymaps
 vim.keymap.set('n', '<C-j>', "<cmd>ToggleTerm direction=vertical size=100<cr>")
