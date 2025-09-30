@@ -17,6 +17,11 @@ return {
               ['<S-Tab>'] = {'select_prev', 'fallback'},
 
         },
+        completion = {
+            menu = {
+                auto_show = false
+            }
+        },
         cmdline = {
             keymap = {
                 ['<CR>'] = {'accept_and_enter', 'fallback'},
