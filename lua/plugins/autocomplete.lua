@@ -7,24 +7,22 @@ return {
     opts = {
         appearance = {
             nerd_font_variant = 'mono',
-            use_nvim_cmp_as_default = true,
         },
 
         keymap = {
             preset = 'default',
               ['<CR>'] = {'accept', 'fallback'},
-              ['<Tab>'] = {'select_next', 'fallback'},
-              ['<S-Tab>'] = {'select_prev', 'fallback'},
+              ['<C-k>'] = {'select_next', 'fallback'},
+              ['<C-l>'] = {'select_prev', 'fallback'},
+              ['<esc>'] = {'cancel', 'fallback'}
 
-        },
-        completion = {
-            menu = {
-                auto_show = false
-            }
         },
         cmdline = {
             keymap = {
-                ['<CR>'] = {'accept_and_enter', 'fallback'},
+                ['<CR>'] = {'accept', 'fallback'},
+                ['<C-k>'] = {'select_next', 'fallback'},
+                ['<C-l>'] = {'select_prev', 'fallback'},
+                ['<esc>'] = {'cancel', 'fallback'}
             }
         },
         sources = {

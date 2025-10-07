@@ -11,15 +11,10 @@ return {
 			require("mason").setup({})
 			require("mason-lspconfig").setup({})
 
-            local conf = require('lspconfig')
-
-            conf.ts_ls.setup {}
-
-            conf.cds_lsp.setup {}
-
-            conf.clangd.setup {}
-
-            conf.lua_ls.setup {}
+            vim.lsp.enable("cds_lsp")
+            vim.lsp.enable("clangd")
+            vim.lsp.enable("lua_ls")
+            vim.lsp.enable("ts_ls")
 
             vim.keymap.set("n", "gd", function() vim.lsp.buf.definition() end, opts)
             vim.keymap.set("n", "L", function() vim.lsp.buf.hover() end, opts)
