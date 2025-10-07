@@ -1,6 +1,7 @@
 {
   "aerial.nvim": { "branch": "master", "commit": "5e687b5a14004fa2dd9eccbee042b96869fe1557" },
   "avante.nvim": { "branch": "main", "commit": "a7052aca0bdfb93e524f0536ac80e6c542962f47" },
+  "blink-cmp-copilot": { "branch": "main", "commit": "439cff78780c033aa23cf061d7315314b347e3c1" },
   "blink.cmp": { "branch": "main", "commit": "485c03400608cb6534bbf84da8c1c471fc4808c0" },
   "copilot.lua": { "branch": "master", "commit": "30b98a4c25d6152c14084020f703b6d56e1f1122" },
   "fzf-lua": { "branch": "main", "commit": "a13c5c500b60f076b7ae1ae5df3cd4b547418ca1" },

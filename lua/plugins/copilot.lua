@@ -27,12 +27,8 @@ return {
             event = "InsertEnter",
             config = function()
                 require("copilot").setup({
-                    suggestion = {
-                        keymap = {
-                            accept = "<C-l>",
-                            accept_word = "<C-k>"
-                        }
-                    }
+                    suggestion = { enabled = false },
+                    panel = { enabled = false },
                 })
             end,
         }, -- for providers='copilot'
