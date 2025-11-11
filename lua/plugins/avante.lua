@@ -8,11 +8,12 @@ return {
     ---@module 'avante'
     ---@type avante.Config
     opts = {
-        instructions_file = "avante.md",
         provider = "copilot",
-        behaviour = {
-            auto_apply_diff_after_generation = true
-        }
+        behavior = {
+            use_cwd_as_project_root = true,
+            auto_apply_diff_after_generation = true,
+            auto_focus_on_diff_view = true,
+        },
     },
     dependencies = {
         "nvim-lua/plenary.nvim",
