@@ -33,6 +33,14 @@ vim.keymap.set('n', '<C-j>', "<cmd>ToggleTerm direction=vertical size=100<cr>")
 vim.keymap.set('v', '<C-j>', "<cmd>ToggleTerm direction=vertical size=100<cr>")
 vim.keymap.set('i', '<C-j>', "<cmd>ToggleTerm direction=vertical size=100<cr>")
 
+-- telescope keymaps
+local builtin = require('telescope.builtin')
+vim.keymap.set('n', '<leader>pa', builtin.find_files, { desc = 'Telescope find files' })
+vim.keymap.set('n', '<leader>pf', builtin.git_files, { desc = 'Telescope find files' })
+vim.keymap.set('n', '<leader>ps', builtin.live_grep, { desc = 'Telescope live grep' })
+vim.keymap.set('n', '<leader>pr', builtin.resume, { desc = 'Telescope resume' })
+vim.keymap.set('n', '<leader>ph', builtin.help_tags, { desc = 'Telescope help tags' })
+
 require("toggleterm").setup()
 local opts = {buffer = 0}
 

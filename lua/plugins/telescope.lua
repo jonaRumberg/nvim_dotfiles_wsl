@@ -4,13 +4,14 @@ return {
         'nvim-lua/plenary.nvim',
         "nvim-tree/nvim-web-devicons"
     },
-	config = function()
-		local builtin = require('telescope.builtin')
-		vim.keymap.set('n', '<leader>pa', builtin.find_files, { desc = 'Telescope find files' })
-		vim.keymap.set('n', '<leader>pf', builtin.git_files, { desc = 'Telescope find files' })
-		vim.keymap.set('n', '<leader>ps', builtin.live_grep, { desc = 'Telescope live grep' })
-		vim.keymap.set('n', '<leader>rs', builtin.resume, { desc = 'Telescope resume' })
-		-- vim.keymap.set('n', '<leader>', builtin.buffers, { desc = 'Telescope buffers' })
-		vim.keymap.set('n', '<leader>ph', builtin.help_tags, { desc = 'Telescope help tags' })
-	end
+	opts = {
+        defaults = {
+            mappings = {
+                i = {
+                    ["<C-k>"] = "cycle_history_next",
+                    ["<C-l>"] = "cycle_history_prev",
+                }
+            }
+        },
+    }
 }
