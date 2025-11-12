@@ -41,6 +41,10 @@ vim.keymap.set('n', '<leader>ps', builtin.live_grep, { desc = 'Telescope live gr
 vim.keymap.set('n', '<leader>pr', builtin.resume, { desc = 'Telescope resume' })
 vim.keymap.set('n', '<leader>ph', builtin.help_tags, { desc = 'Telescope help tags' })
 
+-- limelight
+vim.keymap.set("n", "<leader>hs", ":Limelight!!<CR>");
+vim.keymap.set("v", "<leader>hs", ":Limelight!!<CR>");
+
 require("toggleterm").setup()
 local opts = {buffer = 0}
 

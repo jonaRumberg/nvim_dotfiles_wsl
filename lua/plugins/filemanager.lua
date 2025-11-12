@@ -8,6 +8,12 @@ return {
         views = {
             finder = {
                 default_explorer = true,
+                watcher = {
+                    enabled = true,
+                },
+                mappings = {
+                    ["-"] = "CollapseNode"
+                },
                 git_status = {
                     enabled = true,
                     symbols = {
@@ -15,6 +21,7 @@ return {
                         Added = "✚",
                         Deleted = "✖",
                         Untracked = "U",
+                        Ignored = "",
                     },
                 },
             },

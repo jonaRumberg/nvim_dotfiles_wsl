@@ -24,7 +24,13 @@ return {
                 }),
             }
         })
-        vim.api.nvim_set_keymap('n', '<leader>tr', "<cmd>lua require('neotest').run.run()<CR>", { noremap = true, silent = true })
-    end
+    end,
+    keys = {
+        {
+            "<leader>tr",
+            function() require("neotest").run.run() end,
+            desc = "Run nearest test",
+        }
+    }
 }
 
