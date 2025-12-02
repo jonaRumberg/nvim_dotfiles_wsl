@@ -14,6 +14,11 @@ return {
                 mappings = {
                     ["-"] = "CollapseNode"
                 },
+                win = {
+                    win_opts = {
+                        rnu = true
+                    }
+                },
                 git_status = {
                     enabled = true,
                     symbols = {
