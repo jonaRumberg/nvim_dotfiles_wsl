@@ -2,7 +2,7 @@
 return {
     'saghen/blink.cmp',
 	event = "BufEnter",
-    version = 'v0.*',
+    build = "cargo build --release",
     opts = {
         appearance = {
             nerd_font_variant = 'mono',
@@ -27,6 +27,12 @@ return {
         sources = {
             default = { 'lsp', 'path', 'snippets', 'buffer', "copilot" },
             providers = {
+                path = {
+                    -- disable conflicting autocomplete with CopilotChat
+                    enable = function ()
+                        return vim.bo.filetype ~= "copilot-chat"
+                    end,
+                },
                 copilot = {
                     name = "copilot",
                     module = "blink-cmp-copilot",
