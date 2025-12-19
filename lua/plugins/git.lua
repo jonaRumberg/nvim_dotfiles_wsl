@@ -32,19 +32,5 @@ return {
             end
 
         },
-    },
-    {
-        'pwntester/octo.nvim',
-        cmd = 'Octo',
-        requires = {
-            'nvim-lua/plenary.nvim',
-            'nvim-telescope/telescope.nvim',
-            'nvim-tree/nvim-web-devicons',
-        },
-        opts = {
-            enable_builtin = true,
-            default_to_project_v2 = true,
-            picker = "telescope",
-        },
     }
 }
