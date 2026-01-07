@@ -20,6 +20,7 @@ vim.api.nvim_set_keymap("n", "gr", '<cmd>lua vim.lsp.buf.references()<CR>', { no
 
 -- fyler remap
 vim.api.nvim_set_keymap("n", "<leader>pv", "<CMD>Oil<CR>", { desc = "Open parent directory" })
+vim.api.nvim_set_keymap("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
 
 -- half jump
 vim.keymap.set('n', '<C-k>', "<C-d>")

@@ -25,13 +25,14 @@ return {
             }
         },
         sources = {
-            default = { 'lsp', 'path', 'snippets', 'buffer', "copilot" },
+            default = { 'lsp', 'snippets', "avante", "copilot" },
             providers = {
-                path = {
-                    -- disable conflicting autocomplete with CopilotChat
-                    enable = function ()
-                        return vim.bo.filetype ~= "copilot-chat"
-                    end,
+                avante = {
+                    module = "blink-cmp-avante",
+                    name = "Avante",
+                    opts = {
+                        -- options for blink-cmp-avante
+                    },
                 },
                 copilot = {
                     name = "copilot",
@@ -51,5 +52,6 @@ return {
     },
     dependencies = {
         "giuxtaposition/blink-cmp-copilot",
+        "Kaiser-Yang/blink-cmp-avante",
     }
 }
